@@ -3,6 +3,7 @@ import os
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
+import webserver
 
 load_dotenv()
 
@@ -22,5 +23,5 @@ async def main():
         await bot.load_extension("functions")
         await bot.start(os.getenv("DISCORD_TOKEN"))
 
-
+webserver.keepalive()
 asyncio.run(main())
