@@ -208,6 +208,10 @@ class Economics(commands.Cog):
     async def reserve(self, ctx, country: str, start: str, end: str = None):
         await world_bank_fetch(ctx, country, start, end, "FI.RES.TOTL.CD", "FX Reserves", unit="USD")
 
+    @commands.command()
+    async def gpd(self, ctx, *args):
+        await ctx.send("You spelled it wrong, a bit tired aren't you? Let me calm you down.", file=discord.File("shrek.jpg"))
+
     # Shows all available commands and usage examples, one block per category
     @commands.command()
     async def menu(self, ctx):
